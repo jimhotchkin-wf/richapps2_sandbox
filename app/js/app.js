@@ -1,5 +1,5 @@
-'use strict';
 define(['angular'], function (angular) {
+    'use strict';
     var app = angular.module('myApp', []);
     /* register a controller */
     app.controller('MainCtrl', function ($scope) {
