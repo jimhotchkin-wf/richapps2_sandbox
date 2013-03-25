@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello World Example</title>
+    <style type="text/css">
+        [ng\:cloak], [ng-cloak], .ng-cloak {
+            display: none !important;
+        }
+    </style>
     <script data-main="main" src="lib/require/require.js"></script>
 </head>
-<body ng-controller="MainCtrl">
+<body ng-controller="MainCtrl" ng-cloak>
     <p>
         <label>Name</label>
         <input type="text" ng-model="name"/>

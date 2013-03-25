@@ -1,26 +1,26 @@
-'use strict';
-
 require.config({
     paths: {
-        'angular': 'lib/angular/angular.min'
+        angular: 'lib/angular/angular.min',
+        app: 'js/app',
+        domReady: 'lib/require/domReady'
     },
     shim: {
         'angular': {
             exports: 'angular'
         }
-    }
+    },
+    priority: [
+        'angular'
+    ]
 });
 
 require([
+    'domReady',
     'angular',
-    'js/app'
-], function (angular, app) {
-    //This function will be called when all the dependencies
-    //listed above are loaded. Note that this function could
-    //be called before the page is loaded.
-    //This callback is optional.
-
-    angular.element(document).ready(function () {
+    'app'
+], function (domReady, angular, app) {
+    'use strict';
+    domReady(function () {
         angular.bootstrap(document, ['myApp']);
     });
 });
