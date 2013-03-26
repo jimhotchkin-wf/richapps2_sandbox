@@ -6,11 +6,16 @@
     <script src="js/main.opt.js"></script>
 </head>
 <body ng-controller="MainCtrl">
+
     <p>
         <label>Name</label>
         <input type="text" ng-model="name"/>
         <button ng-click="reverseName()">Reverse</button>
     </p>
-    Hello {{name}}!
+
+    <p>Hello {{name}}!</p>
+
+    <div test-elem></div>
+
 </body>
 </html>

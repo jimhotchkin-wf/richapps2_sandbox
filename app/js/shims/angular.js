@@ -1,2 +1,4 @@
-require('../../lib/angular/angular.min.js');
+'use strict';
+
+require('../../lib/angular/angular.min');
 module.exports = angular;
