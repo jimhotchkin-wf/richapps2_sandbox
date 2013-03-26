@@ -13,4 +13,4 @@ module.controller('MainCtrl', function ($scope) {
     };
 });
 
-module.exports = module; 
+module.exports = module;
