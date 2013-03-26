@@ -1,18 +1,16 @@
-define(['angular'], function (angular) {
-    'use strict';
-    debugger;
-    var app = angular.module('myApp', []);
+var angular = require('./shims/angular');
 
-    /* register a controller */
-    app.controller('MainCtrl', function ($scope) {
-        /* $scope is what is used for two-way binding */
-        $scope.name = 'World';
+var module = angular.module('myApp', []);
 
-        /* declare a method to call from a click in our markup */
-        $scope.reverseName = function () {
-            $scope.name = $scope.name.split('').reverse().join('');
-        };
-    });
+/* register a controller */
+module.controller('MainCtrl', function ($scope) {
+    /* $scope is what is used for two-way binding */
+    $scope.name = 'World';
 
-    return app;
+    /* declare a method to call from a click in our markup */
+    $scope.reverseName = function () {
+        $scope.name = $scope.name.split('').reverse().join('');
+    };
 });
+
+module.exports = module; 
