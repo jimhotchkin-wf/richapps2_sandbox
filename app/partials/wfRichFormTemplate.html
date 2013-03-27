@@ -1,0 +1,16 @@
+<form id="edit_{{data.entity}}">
+    <input ng-repeat="field in data.fields.hidden" type="hidden" name="{{field.entity}}" id="id_{{field.entity}}" value="" />
+    <ol>
+        <li ng-repeat="field in data.fields.visible" ng-switch="field.type" id="li_{{field.entity}}">
+            <label for="id_{{field.entity}}">
+                {{field.label}}:
+                <span ng-show="field.required" class="required-indicator" title="This Field is Required">*</span>
+            </label>
+            <select ng-switch-when="select" name="{{field.entity}}" id="id_{{field.entity}}" ng-required="{{field.required}}">
+                <option ng-repeat="option in field.choices" value="{{option.value}}">{{option.label}}</option>
+            </select>
+            <textarea ng-switch-when="textarea" rows="10" cols="40" name="{{field.entity}}" id="id_{{field.entity}}" ng-required="{{field.required}}"></textarea>
+            <input ng-switch-default name="{{field.entity}}" id="id_{{field.entity}}" type="{{field.type}}" ng-required="{{field.required}}" value="" />
+        </li>
+    </ol>
+</form>

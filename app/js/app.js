@@ -2,10 +2,10 @@
 
 var angular = require('./shims/angular');
 
-var myApp = angular.module('myApp', []);
+var wfApp = angular.module('wfApp', []);
 
 /* register controllers */
-myApp.controller('MainCtrl', function ($scope, stringTricksFactory) {
+wfApp.controller('MainCtrl', function ($scope, stringTricksFactory) {
     $scope.name = 'World';
     $scope.reverseName = function () {
         $scope.name = stringTricksFactory.reverse($scope.name);
@@ -13,18 +13,18 @@ myApp.controller('MainCtrl', function ($scope, stringTricksFactory) {
 });
 
 /* register directives */
-myApp.directive('testElem', function (getData) {
+wfApp.directive('wfRichForm', function (getData) {
     return {
         restrict: 'A',
-        templateUrl: '/app/partials/testElemTemplate.html',
+        templateUrl: '/app/partials/wfRichFormTemplate.html',
         link: function (scope, element, attrs) {
-            scope.arr = getData.profileJson();
+            scope.data = getData.profileJson();
         }
     };
 });
 
 /* register services */
-myApp.factory('stringTricksFactory', function () {
+wfApp.factory('stringTricksFactory', function () {
     return {
         reverse: function (str) {
             return str.split('').reverse().join('');
@@ -32,12 +32,11 @@ myApp.factory('stringTricksFactory', function () {
     };
 });
 
-myApp.factory('getData', function ($http) {
+wfApp.factory('getData', function ($http) {
     var getData = {
         profileJson: function () {
             var promise = $http.get('js/test.json').then(function (response) {
-                console.log(response);
-
+                // manipulate json response object?
                 return response.data;
             });
             return promise;
@@ -46,4 +45,4 @@ myApp.factory('getData', function ($http) {
     return getData;
 });
 
-module.exports = myApp;
+module.exports = wfApp;

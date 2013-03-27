@@ -4,5 +4,5 @@ var angular = require('./shims/angular');
 require('./app');
 
 angular.element(document).ready(function () {
-    angular.bootstrap(document, ['myApp']);
+    angular.bootstrap(document, ['wfApp']);
 });

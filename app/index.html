@@ -2,20 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello World Example</title>
+    <title>Rich Form Example</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/main.opt.js"></script>
 </head>
-<body ng-controller="MainCtrl">
+<body>
+    <div wf-rich-form></div>
 
-    <p>
-        <label>Name</label>
-        <input type="text" ng-model="name"/>
-        <button ng-click="reverseName()">Reverse</button>
-    </p>
+    <!-- some custom form with cool layout -->
+    <label for="foo">foo</label><input type="text" name="foo"></input> <!--    <<<<<----- lots of fancy markup   ->
 
-    <p>Hello {{name}}!</p>
-
-    <div test-elem></div>
+    <wf-input-label />
 
 </body>
 </html>
