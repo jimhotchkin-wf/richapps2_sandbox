@@ -2,6 +2,12 @@
 
 var angular = require('./shims/angular');
 
+var textInputTemplate = require('text!../partials/wfRichFormText.html');
+var textareaInputTemplate = require('text!../partials/wfRichFormTextarea.html');
+var selectInputTemplate = require('text!../partials/wfRichFormSelect.html');
+var hiddenInputTemplate = require('text!../partials/wfRichFormhidden.html');
+var labelTemplate = require('text!../partials/wfRichFormLabel.html');
+
 var wfApp = angular.module('wfApp', []);
 
 /* register controllers */
@@ -35,7 +41,7 @@ wfApp.directive('wfInput', function () {
 wfApp.directive('wfDynamicForm', function (getData, getTemplate) {
 
     var linker = function (scope, element, attrs) {
-        console.log(attrs);
+        // console.log(attrs);
         var e, i, child_scope;
         getData.entityJson(attrs.entity).then(function (result) {
             for (i = 0; i < result.data.fields.visible.length; i++) {
@@ -80,11 +86,9 @@ wfApp.factory('getData', function ($http) {
 
 wfApp.factory('getTemplate', function ($compile) {
     var getTemplate = function (type) {
-        var labelTemplate = '<label for="id_{{entity}}">{{label}}:<span ng-show="required" class="required-indicator" title="This Field is Required">*</span></label>';
-        var textTemplate = labelTemplate + '<input name="{{entity}}" id="id_{{entity}}" type="{{type}}" ng-required="{{required}}" value="" />';
-        var textareaTemplate = labelTemplate + '<textarea rows="10" cols="40" name="{{entity}}" id="id_{{entity}}" ng-required="{{required}}"></textarea>';
-        var selectTemplate = labelTemplate + '<select name="{{entity}}" id="id_{{entity}}" ng-required="{{required}}"><option ng-repeat="option in choices" value="{{option.value}}">{{option.label}}</option></select>';
-        var hiddenTemplate = '<input type="hidden" name="{{entity}}" id="id_{{entity}}" value="" />';
+        var textTemplate = labelTemplate + textInputTemplate;
+        var textareaTemplate = labelTemplate + textareaInputTemplate;
+        var selectTemplate = labelTemplate + selectInputTemplate;
         var dateTemplate = labelTemplate + '<wf-date-picker></wf-date-picker>';
         var result;
         var template;
@@ -96,7 +100,7 @@ wfApp.factory('getTemplate', function ($compile) {
                 template = selectTemplate;
                 break;
             case 'hidden':
-                template = hiddenTemplate;
+                template = hiddenInputTemplate;
                 break;
             case 'date':
                 template = dateTemplate;

@@ -1,7 +1,3 @@
-<label for="id_{{content.entity}}">
-    {{field.label}}:
-    <span ng-show="content.required" class="required-indicator" title="This Field is Required">*</span>
-</label>
-<select name="{{content.entity}}" id="id_{{content.entity}}" ng-required="{{content.required}}">
-    <option ng-repeat="option in content.choices" value="{{option.value}}">{{option.label}}</option>
+<select name="{{entity}}" id="id_{{entity}}" ng-required="{{required}}">
+    <option ng-repeat="option in choices" value="{{option.value}}">{{option.label}}</option>
 </select>
