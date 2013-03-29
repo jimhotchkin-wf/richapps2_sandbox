@@ -1,0 +1,5 @@
+<label for="id_{{content.entity}}">
+    {{content.label}}:
+    <span ng-show="content.required" class="required-indicator" title="This Field is Required">*</span>
+</label>
+<input name="{{content.entity}}" id="id_{{content.entity}}" type="{{content.type}}" ng-required="{{content.required}}" value="" />

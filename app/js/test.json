@@ -37,6 +37,14 @@
                     "maxlength":255
                 },
                 {
+                    "label":"Birth Date",
+                    "type":"date",
+                    "entity":"birthdate",
+                    "required":"false",
+                    "readonly":"false",
+                    "maxlength":10
+                },
+                {
                     "label":"Company",
                     "type":"text",
                     "entity":"company",
@@ -118,19 +126,12 @@
                     "maxlength":20
                 },
                 {
-                    "label":"Fax Number",
+                    "label":"Office Phone",
                     "type":"text",
-                    "entity":"fax",
+                    "entity":"officephone",
                     "required":"false",
                     "readonly":"false",
                     "maxlength":20
-                },
-                {
-                    "type":"text",
-                    "label":"SAML ID",
-                    "required":"false",
-                    "readonly":"false",
-                    "entity":"saml_id"
                 },
                 {
                     "type":"text",
@@ -144,7 +145,9 @@
                     "type":"textarea",
                     "entity":"openid_identities",
                     "required":"false",
-                    "readonly":"false"
+                    "readonly":"false",
+                    "rows":10,
+                    "columns":40
                 }
             ]
         }

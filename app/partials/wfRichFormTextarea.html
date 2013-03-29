@@ -1,0 +1,5 @@
+<label for="id_{{content.entity}}">
+    {{field.label}}:
+    <span ng-show="content.required" class="required-indicator" title="This Field is Required">*</span>
+</label>
+<textarea rows="10" cols="40" name="{{content.entity}}" id="id_{{content.entity}}" ng-required="{{content.required}}"></textarea>
