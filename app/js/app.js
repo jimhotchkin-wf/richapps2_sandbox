@@ -35,8 +35,9 @@ wfApp.directive('wfInput', function () {
 wfApp.directive('wfDynamicForm', function (getData, getTemplate) {
 
     var linker = function (scope, element, attrs) {
+        console.log(attrs);
         var e, i, child_scope;
-        getData.profileJson().then(function (result) {
+        getData.entityJson(attrs.entity).then(function (result) {
             for (i = 0; i < result.data.fields.visible.length; i++) {
                 e = result.data.fields.visible[i];
                 child_scope = scope.$new();
@@ -57,8 +58,17 @@ wfApp.directive('wfDynamicForm', function (getData, getTemplate) {
 
 wfApp.factory('getData', function ($http) {
     var getData = {
-        profileJson: function () {
-            var promise = $http.get('js/test.json').then(function (response) {
+        entityJson: function (entity) {
+            var jsonUri, promise;
+            switch (entity) {
+                case 'userprofile':
+                    jsonUri = 'js/profile.json';
+                    break;
+                case 'accounts':
+                    jsonUri = 'js/accounts.json';
+                    break;
+            };
+            promise = $http.get(jsonUri).then(function (response) {
                 // manipulate json response object?
                 return response;
             });
