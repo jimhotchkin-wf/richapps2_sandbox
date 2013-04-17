@@ -1,163 +1,181 @@
 {
-    "entity":"userprofile",
+    "entity": "userprofile",
     "label": "User Profile",
-    "fields":
-        {
-            "hidden": [
+    "fieldtypes": {
+        "hidden": [
+            {
+                "type": "hidden",
+                "entity": "key",
+                "value": "001001001"
+            },
+            {
+                "type": "hidden",
+                "entity": "key_name",
+                "value": "binary-blob"
+            }
+        ],
+        "visible": {
+            "categories": [
                 {
-                    "type":"hidden",
-                    "entity":"key",
-                    "value": "001001001"
-                },
-                {
-                    "type":"hidden",
-                    "entity":"key_name",
-                    "value": "binary-blob"
-                }
-            ],
-            "visible": [
-                {
-                    "type":"text",
-                    "label":"User Name",
-                    "entity":"username",
-                    "value": "jim.hotchkin",
-                    "required":true,
-                    "readonly":true
-                },
-                {
-                    "label":"First Name",
-                    "type":"text",
-                    "entity":"firstname",
-                    "value": "James",
-                    "required":true,
-                    "readonly":false,
-                    "maxlength":255
-                },
-                {
-                    "label":"Last Name",
-                    "type":"text",
-                    "entity":"lastname",
-                    "value": "Hotchkin",
-                    "required":true,
-                    "readonly":false,
-                    "maxlength":255
-                },
-                {
-                    "label":"Birth Date",
-                    "type":"date",
-                    "entity":"birthdate",
-                    "value": "",
-                    "required":false,
-                    "readonly":false,
-                    "maxlength":10
-                },
-                {
-                    "label":"Company",
-                    "type":"text",
-                    "entity":"company",
-                    "value": "WebFilings, LLC",
-                    "required":false,
-                    "readonly":false,
-                    "maxlength":255
-                },
-                {
-                    "label":"Title",
-                    "type":"text",
-                    "entity":"title",
-                    "value": "Software Engineer",
-                    "required":false,
-                    "readonly":false,
-                    "maxlength":255
-                },
-                {
-                    "label":"Time Zone",
-                    "type":"select",
-                    "entity":"TIME_ZONE_DISPLAY",
-                    "required":false,
-                    "readonly":false,
-                    "value": "CST",
-                    "choices": [
+                    "entity": "basic",
+                    "label": "Basic Information",
+                    "fields": [
                         {
-                            "label":"US/Eastern",
-                            "value":"EST"
+                            "type": "text",
+                            "label": "User Name",
+                            "entity": "username",
+                            "value": "jim.hotchkin",
+                            "required": true,
+                            "readonly": true
                         },
                         {
-                            "label":"US/Central",
-                            "value":"CST"
+                            "label": "First Name",
+                            "type": "text",
+                            "entity": "firstname",
+                            "value": "James",
+                            "required": true,
+                            "readonly": false,
+                            "maxlength": 255
                         },
                         {
-                            "label":"US/Mountain",
-                            "value":"MST"
+                            "label": "Last Name",
+                            "type": "text",
+                            "entity": "lastname",
+                            "value": "Hotchkin",
+                            "required": true,
+                            "readonly": false,
+                            "maxlength": 255
                         },
                         {
-                            "label":"US/Pacific",
-                            "value":"PST"
+                            "label": "Birth Date",
+                            "type": "date",
+                            "entity": "birthdate",
+                            "value": "",
+                            "required": false,
+                            "readonly": false,
+                            "maxlength": 10
                         },
                         {
-                            "label":"US/Alaska",
-                            "value":"AST"
+                            "label": "Company",
+                            "type": "text",
+                            "entity": "company",
+                            "value": "WebFilings, LLC",
+                            "required": false,
+                            "readonly": false,
+                            "maxlength": 255
                         },
                         {
-                            "label":"US/Hawaii",
-                            "value":"HST"
+                            "label": "Title",
+                            "type": "text",
+                            "entity": "title",
+                            "value": "Software Engineer",
+                            "required": false,
+                            "readonly": false,
+                            "maxlength": 255
+                        },
+                        {
+                            "label": "Time Zone",
+                            "type": "select",
+                            "entity": "TIME_ZONE_DISPLAY",
+                            "required": false,
+                            "readonly": false,
+                            "value": "CST",
+                            "choices": [
+                                {
+                                    "label": "US/Eastern",
+                                    "value": "EST"
+                                },
+                                {
+                                    "label": "US/Central",
+                                    "value": "CST"
+                                },
+                                {
+                                    "label": "US/Mountain",
+                                    "value": "MST"
+                                },
+                                {
+                                    "label": "US/Pacific",
+                                    "value": "PST"
+                                },
+                                {
+                                    "label": "US/Alaska",
+                                    "value": "AST"
+                                },
+                                {
+                                    "label": "US/Hawaii",
+                                    "value": "HST"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "label":"E-mail",
-                    "type":"email",
-                    "entity":"email",
-                    "value": "jim.hotchkin@webfilings.com",
-                    "maxlength":100,
-                    "required":true,
-                    "readonly":false
+                    "entity": "contact",
+                    "label": "Contact Information",
+                    "fields": [
+                        {
+                            "label": "E-mail",
+                            "type": "email",
+                            "entity": "email",
+                            "value": "jim.hotchkin@webfilings.com",
+                            "maxlength": 100,
+                            "required": true,
+                            "readonly": false
+                        },
+                        {
+                            "label": "Home Phone",
+                            "type": "text",
+                            "entity": "homephone",
+                            "value": "",
+                            "required": false,
+                            "readonly": false,
+                            "maxlength": 20
+                        },
+                        {
+                            "label": "Cell Phone",
+                            "type": "text",
+                            "entity": "cellphone",
+                            "value": "",
+                            "required": false,
+                            "readonly": false,
+                            "maxlength": 20
+                        },
+                        {
+                            "label": "Office Phone",
+                            "type": "text",
+                            "entity": "officephone",
+                            "value": "",
+                            "required": false,
+                            "readonly": false,
+                            "maxlength": 20
+                        }
+                    ]
                 },
                 {
-                    "label":"Home Phone",
-                    "type":"text",
-                    "entity":"homephone",
-                    "value": "",
-                    "required":false,
-                    "readonly":false,
-                    "maxlength":20
-                },
-                {
-                    "label":"Cell Phone",
-                    "type":"text",
-                    "entity":"cellphone",
-                    "value": "",
-                    "required":false,
-                    "readonly":false,
-                    "maxlength":20
-                },
-                {
-                    "label":"Office Phone",
-                    "type":"text",
-                    "entity":"officephone",
-                    "value": "",
-                    "required":false,
-                    "readonly":false,
-                    "maxlength":20
-                },
-                {
-                    "type":"text",
-                    "label":"Two-Factor Auth",
-                    "required":false,
-                    "readonly":true,
-                    "entity":"has_otpuser_string",
-                    "value": "False"
-                },
-                {
-                    "label":"OpenID Identities",
-                    "type":"textarea",
-                    "entity":"openid_identities",
-                    "value": "",
-                    "required":false,
-                    "readonly":false,
-                    "rows":10,
-                    "columns":40
+                    "entity": "auth",
+                    "label": "Authentication Information",
+                    "fields": [
+                        {
+                            "type": "text",
+                            "label": "Two-Factor Auth",
+                            "required": false,
+                            "readonly": true,
+                            "entity": "has_otpuser_string",
+                            "value": "False"
+                        },
+                        {
+                            "label": "OpenID Identities",
+                            "type": "textarea",
+                            "entity": "openid_identities",
+                            "value": "",
+                            "required": false,
+                            "readonly": false,
+                            "rows": 10,
+                            "columns": 40
+                        }
+                    ]
                 }
             ]
         }
-
+    }
 }

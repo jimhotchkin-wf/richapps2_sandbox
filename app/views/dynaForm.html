@@ -1,10 +1,10 @@
-<div id="container" class="row-fluid">
-    <form wf-dynamic-form entity="userprofile" class="dyna-form">
+<div id="container" class="row-fluid ui-panel-content ui-widget-content">
+    <form wf-dynamic-form entity="userprofile" class="dyna-form pro-forms">
         <div class="span8">
-            <fieldset id="{{formDefinitionObject.entity}}">
-            <legend>{{formDefinitionObject.label}}</legend>
+            <fieldset ng-repeat="category in formDefinitionObject.fieldtypes.visible.categories" id="{{category.entity}}_fields">
+            <legend>{{category.label}}</legend>
             <ul class="dyna-form">
-                <li wf-dynamic-field ng-repeat="field in formDefinitionObject.fields.visible" content="field"></li>
+                <li wf-dynamic-field ng-repeat="field in category.fields" content="field"></li>
             </ul>
             </fieldset>
             <div class="form-controlbox">
@@ -14,7 +14,14 @@
         </div>
         <div class="span4">
             <ul>
-                <li ng-repeat="field in formDefinitionObject.fields.visible" content="field">{{field.entity}} -- {{field.value}}</li>
+                <li ng-repeat="category in formDefinitionObject.fieldtypes.visible.categories">
+                    {{category.entity}}
+                    <ul>
+                        <li ng-repeat="field in category.fields" content="field">
+                            {{field.entity}} -- {{field.value}}
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </form>
