@@ -1,0 +1,37 @@
+@import "compass_twitter_bootstrap";
+
+.hero-unit h1 {
+  color: teal;
+}
+
+span.required-indicator {
+  color: red;
+  font-weight: 800;
+  padding-left: 0.5em;
+  position: relative;
+  top:3px;
+}
+
+.dyna-form input.ng-invalid.ng-dirty {
+    background-color: #fd9295;
+}
+    
+.dyna-form input.ng-valid.ng-dirty {
+    background-color: #bfff9d;
+}
+
+.form-controlbox {
+    margin: 0 0 1em 2em;
+}
+
+fieldset > ul {
+    list-style: none;
+}
+
+ul.dyna-form li label {
+    margin-bottom: 2px;
+}
+
+ul.dyna-form li input {
+    margin-bottom: 1.0em;
+}

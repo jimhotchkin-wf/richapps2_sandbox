@@ -1,0 +1,21 @@
+<div id="container" class="row-fluid">
+    <form wf-dynamic-form entity="userprofile" class="dyna-form">
+        <div class="span8">
+            <fieldset id="{{formDefinitionObject.entity}}">
+            <legend>{{formDefinitionObject.label}}</legend>
+            <ul class="dyna-form">
+                <li wf-dynamic-field ng-repeat="field in formDefinitionObject.fields.visible" content="field"></li>
+            </ul>
+            </fieldset>
+            <div class="form-controlbox">
+                <input type="submit" name="go" id="go" value="Save changes" />
+                <input type="reset" name="cancel" id="cancel" value="Cancel" />
+            </div>
+        </div>
+        <div class="span4">
+            <ul>
+                <li ng-repeat="field in formDefinitionObject.fields.visible" content="field">{{field.entity}} -- {{field.value}}</li>
+            </ul>
+        </div>
+    </form>
+</div>
