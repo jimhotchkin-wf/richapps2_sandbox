@@ -4,13 +4,13 @@ angular.module('yeomanAngularApp')
     .factory('getTemplate', function () {
 
         var getTemplate = function (type) {
-            var labelTemplate = '<label for="id_{{field.entity}}">{{field.label}}:<span ng-show="field.required" class="required-indicator" title="This Field is Required">*</span></label>', template;
+            var template, labelTemplate = '<label for="id_{{field.entity}}" class="control-label">{{field.label}}<span ng-show="field.required" class="required-indicator" title="This Field is Required">*</span></label>';
             switch (type) {
             case 'textarea':
-                template = labelTemplate + '<textarea rows="{{field.rows}}" cols="{{field.columns}}" name="{{field.entity}}" id="id_{{field.entity}}" ng-model="field.value" maxlength="{{field.maxlength}}" ng-required="field.required"></textarea>';
+                template = labelTemplate + '<div class="controls"><textarea rows="{{field.rows}}" name="{{field.entity}}" id="id_{{field.entity}}" class="input-small" ng-model="field.value" maxlength="{{field.maxlength}}" ng-required="field.required"></textarea></div>';
                 break;
             case 'select':
-                template = labelTemplate + '<select name="{{field.entity}}" id="id_{{field.entity}}" ng-model="field.value" maxlength="{{field.maxlength}}" ng-required="field.required" ng-options="o.value as o.label for o in field.choices"></select>';
+                template = labelTemplate + '<div class="controls"><select name="{{field.entity}}" id="id_{{field.entity}}" ng-model="field.value" class="input-small" maxlength="{{field.maxlength}}" ng-required="field.required" ng-options="o.value as o.label for o in field.choices"></select></div>';
                 break;
             case 'hidden':
                 template = '<input type="hidden" name="{{field.entity}}" id="id_{{field.entity}}" ng-model="field.value" />';
@@ -19,7 +19,7 @@ angular.module('yeomanAngularApp')
                 template = labelTemplate + '<div wf-date-picker></div>';
                 break;
             default:
-                template = labelTemplate + '<input name="{{field.entity}}" id="id_{{field.entity}}" type="{{field.type}}" ng-required="field.required" maxlength="{{field.maxlength}}" ng-readonly="field.readonly" ng-model="field.value" />';
+                template = labelTemplate + '<div class="controls"><input type="{{field.type}}" id="id_{{field.entity}}" placeholder="{{field.label}}" class="input-small" ng-required="field.required" maxlength="{{field.maxlength}}" ng-readonly="field.readonly" ng-model="field.value"></div>';
                 break;
             }
             return template;

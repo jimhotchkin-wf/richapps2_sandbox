@@ -9,7 +9,7 @@ angular.module('yeomanAngularApp')
                 // alert('todo: attach additional behaviour');
             };
         },
-        template: '<input name="{{field.entity}}" id="id_{{field.entity}}" type="date" ng-required="field.required" ng-model="field.value" maxlength="{{field.maxlength}}" ng-readonly="field.readonly" ng-click="additionalEvent()" />',
+        template: '<div class="controls"><input name="{{field.entity}}" id="id_{{field.entity}}" type="date" ng-required="field.required" ng-model="field.value" class="input-small" maxlength="{{field.maxlength}}" ng-readonly="field.readonly" ng-click="additionalEvent()" /></div>',
         replace: true
     };
 });

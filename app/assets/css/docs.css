@@ -1,0 +1,2049 @@
+/*
+ * Wdesk Style Guide Documentation
+ * Special styles for presenting Wdesk's documentation and code examples.
+ */
+/* Key scaffolding
+-------------------------------------------------- */
+/* line 13, ../../../sass/docs.scss */
+body {
+  padding-top: 32px;
+  position: relative;
+  /* For scrollyspy */
+  /* We add the padding to the body for >$mobileHorizon only */
+}
+
+/*    */
+/* line 20, ../../../sass/docs.scss */
+.wdesk-docs-footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 25, ../../../sass/docs.scss */
+.tab-content {
+  padding: 2px;
+}
+
+/* Sections
+-------------------------------------------------- */
+/* Padding for in-page bookmarks */
+/* line 31, ../../../sass/docs.scss */
+section {
+  padding-top: 30px;
+}
+/* line 35, ../../../sass/docs.scss */
+.container > .row section:first-child {
+  padding-top: 0;
+}
+/* line 40, ../../../sass/docs.scss */
+.container > .row .accordion-inner section:first-child {
+  padding-top: 10px;
+}
+
+/* Few stylistic typography tweaks */
+/* line 47, ../../../sass/docs.scss */
+section > .page-header,
+section > .lead {
+  color: #5a5a5a;
+}
+
+/* line 50, ../../../sass/docs.scss */
+section > ul li {
+  margin-bottom: 5px;
+}
+
+/* Jumbotrons
+-------------------------------------------------- */
+/* Base class */
+/* line 59, ../../../sass/docs.scss */
+.wdesk-docs-jumbotron {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 30px 15px;
+  color: #fff;
+  text-align: center;
+  background-color: #707070;
+}
+
+/* line 67, ../../../sass/docs.scss */
+.wdesk-docs-jumbotron h1 {
+  font-size: 50px;
+}
+
+/* Link styles (used on .masthead-links as well) */
+/* line 72, ../../../sass/docs.scss */
+.wdesk-docs-jumbotron a {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+/* line 79, ../../../sass/docs.scss */
+.wdesk-docs-jumbotron a:hover {
+  color: #fff;
+}
+
+/* Download button */
+/* line 84, ../../../sass/docs.scss */
+.wdesk-docs-jumbotron .btn {
+  padding: 18px 24px;
+  font-size: 21px;
+}
+
+/* line 90, ../../../sass/docs.scss */
+.wdesk-docs-jumbotron .btn,
+.wdesk-docs-jumbotron .btn:hover,
+.wdesk-docs-jumbotron .btn:active {
+  color: #707070;
+  background-color: #fff;
+  background-image: none;
+  border-color: #fff;
+}
+
+/* Masthead (docs home)
+------------------------- */
+/* line 99, ../../../sass/docs.scss */
+.masthead h1 {
+  line-height: 1;
+}
+
+/* Textual links in masthead */
+/* line 104, ../../../sass/docs.scss */
+.masthead-links {
+  margin: 20px 0;
+  list-style: none;
+}
+
+/* line 108, ../../../sass/docs.scss */
+.masthead-links li {
+  display: inline;
+  padding: 0 10px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Marketing section of Overview
+-------------------------------------------------- */
+/* line 119, ../../../sass/docs.scss */
+.wdesk-docs-marketing {
+  text-align: center;
+  color: #5a5a5a;
+}
+
+/* line 123, ../../../sass/docs.scss */
+.wdesk-docs-marketing h1 {
+  margin: 60px 0 10px;
+  font-size: 50px;
+  line-height: 1;
+}
+
+/* line 128, ../../../sass/docs.scss */
+.wdesk-docs-marketing h2 {
+  margin-bottom: 5px;
+}
+
+/* line 131, ../../../sass/docs.scss */
+.wdesk-docs-marketing p {
+  line-height: 1.4;
+}
+
+/* line 134, ../../../sass/docs.scss */
+.wdesk-docs-marketing .marketing-byline {
+  margin-bottom: 40px;
+  font-size: 21px;
+  font-family: "GibsonRegular";
+  line-height: 1.25;
+  color: #999;
+}
+
+/* line 141, ../../../sass/docs.scss */
+.marketing-img {
+  display: block;
+  margin: 30px auto 10px;
+  max-height: 145px;
+}
+
+/* Special grid styles
+-------------------------------------------------- */
+/* line 152, ../../../sass/docs.scss */
+.show-grid {
+  margin-bottom: 15px;
+}
+
+/* line 155, ../../../sass/docs.scss */
+.show-grid [class^="span"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+}
+
+/* line 161, ../../../sass/docs.scss */
+.show-grid [class^="span"]:hover {
+  background-color: #ddd;
+}
+
+/* Sidenav
+-------------------------------------------------- */
+/* Base styles are not affixable given mobile-first */
+/* line 171, ../../../sass/docs.scss */
+.wdesk-docs-sidenav {
+  margin: 20px 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 177, ../../../sass/docs.scss */
+.wdesk-docs-sidenav.affix {
+  position: static;
+  top: 0;
+}
+
+/* Chevrons within each link */
+/* line 183, ../../../sass/docs.scss */
+.wdesk-docs-sidenav .icon {
+  position: absolute;
+  left: auto;
+  right: 0;
+  opacity: .25;
+  color: #000;
+}
+
+/* line 190, ../../../sass/docs.scss */
+.wdesk-docs-sidenav a:hover .icon {
+  opacity: .5;
+}
+
+/* line 194, ../../../sass/docs.scss */
+.wdesk-docs-sidenav .active .icon,
+.wdesk-docs-sidenav .active a:hover .icon {
+  color: #fff;
+  opacity: 1;
+}
+
+/* Bootstrap code examples
+-------------------------------------------------- */
+/* Base class */
+/* line 205, ../../../sass/docs.scss */
+.wdesk-docs-example {
+  position: relative;
+  min-height: 100px;
+  padding: 39px 14px 14px;
+  margin-bottom: -1px;
+  border: 1px solid #ddd;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/* line 214, ../../../sass/docs.scss */
+.wdesk-docs-example .navbar-fixed-top, .wdesk-docs-example .navbar-fixed-bottom {
+  position: absolute;
+  z-index: 1029;
+}
+
+/* Echo out a label for the example */
+/* line 223, ../../../sass/docs.scss */
+.wdesk-docs-example:after {
+  content: "Example";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #9da0a4;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* Tweak display of the examples */
+/* line 240, ../../../sass/docs.scss */
+.wdesk-docs-example + .prettyprint,
+.wdesk-docs-example + .highlight {
+  margin-top: 0;
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Tweak content of examples for optimum awesome */
+/* line 259, ../../../sass/docs.scss */
+.wdesk-docs-example > p:last-child,
+.wdesk-docs-example > ul:last-child,
+.wdesk-docs-example > ol:last-child,
+.wdesk-docs-example > blockquote:last-child,
+.wdesk-docs-example > input:last-child,
+.wdesk-docs-example > select:last-child,
+.wdesk-docs-example > textarea:last-child,
+.wdesk-docs-example > .table:last-child,
+.wdesk-docs-example > .jumbotron:last-child,
+.wdesk-docs-example > .alert:last-child {
+  margin-bottom: 0;
+}
+
+/* Tooltips */
+/* line 264, ../../../sass/docs.scss */
+.wdesk-docs-tooltip-examples {
+  text-align: center;
+  margin: 0 0 10px;
+  list-style: none;
+}
+
+/* line 269, ../../../sass/docs.scss */
+.wdesk-docs-tooltip-examples li {
+  display: inline;
+  padding: 0 10px;
+}
+
+/* Popovers */
+/* line 275, ../../../sass/docs.scss */
+.wdesk-docs-example-popover {
+  padding-bottom: 24px;
+  background-color: #f9f9f9;
+}
+
+/* line 279, ../../../sass/docs.scss */
+.wdesk-docs-example-popover .popover {
+  position: relative;
+  display: block;
+  opacity: 1;
+  float: left;
+  width: 260px;
+  margin: 20px;
+}
+/* line 107, ../../../sass/_constants/_ua-media/_browsers.scss */
+.ua-ie8 .wdesk-docs-example-popover .popover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+
+/* Dropdowns */
+/* line 289, ../../../sass/docs.scss */
+.wdesk-docs-example-submenus {
+  min-height: 180px;
+}
+
+/* line 292, ../../../sass/docs.scss */
+.wdesk-docs-example-submenus > .pull-left + .pull-left {
+  margin-left: 20px;
+}
+
+/* line 296, ../../../sass/docs.scss */
+.wdesk-docs-example-submenus .dropup > .dropdown-menu,
+.wdesk-docs-example-submenus .dropdown > .dropdown-menu {
+  display: block;
+  position: static;
+  margin-bottom: 5px;
+  *width: 180px;
+}
+
+/* Typography */
+/* line 305, ../../../sass/docs.scss */
+.wdesk-docs-example-type .table td {
+  color: #999;
+  vertical-align: middle;
+}
+
+/* line 311, ../../../sass/docs.scss */
+.wdesk-docs-example-type .table td,
+.wdesk-docs-example-type .table th {
+  padding: 15px 0;
+  border-color: #eee;
+}
+
+/* line 316, ../../../sass/docs.scss */
+.wdesk-docs-example-type .table tr:first-child td,
+.wdesk-docs-example-type .table tr:first-child th {
+  border-top: 0;
+}
+
+/* line 324, ../../../sass/docs.scss */
+.wdesk-docs-example-type h1,
+.wdesk-docs-example-type h2,
+.wdesk-docs-example-type h3,
+.wdesk-docs-example-type h4,
+.wdesk-docs-example-type h5,
+.wdesk-docs-example-type h6 {
+  margin: 0;
+}
+
+/* Navbar examples */
+/* line 331, ../../../sass/docs.scss */
+.bs-navbar-top-example,
+.bs-navbar-bottom-example {
+  z-index: 1;
+  padding: 0;
+  height: 90px;
+  overflow: hidden;
+  /* cut the drop shadows off */
+}
+
+/* line 338, ../../../sass/docs.scss */
+.bs-navbar-top-example .navbar-fixed-top,
+.bs-navbar-bottom-example .navbar-fixed-bottom {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 342, ../../../sass/docs.scss */
+.bs-navbar-top-example {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+
+/* line 345, ../../../sass/docs.scss */
+.bs-navbar-top-example:after {
+  top: auto;
+  bottom: -1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0 4px 0 4px;
+  border-radius: 0 4px 0 4px;
+}
+
+/* line 350, ../../../sass/docs.scss */
+.bs-navbar-bottom-example {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+
+/* line 353, ../../../sass/docs.scss */
+.bs-navbar-bottom-example .navbar {
+  margin-bottom: 0;
+}
+
+/* line 357, ../../../sass/docs.scss */
+.responsive-navbar {
+  min-height: 400px;
+}
+/* line 1024, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar-brand .brand-link {
+  width: auto;
+  padding: 0;
+}
+/* line 1031, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar .mobile.nav {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 0;
+}
+/* line 1037, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar .mobile.nav .navbar-toggle {
+  height: 32px;
+  padding: 0 15px;
+  line-height: 32px;
+  background-color: white;
+  color: #7bce05;
+}
+/* line 1043, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar .mobile.nav .navbar-toggle.collapsed {
+  color: #6c6c6c;
+}
+/* line 1049, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar .nav-collapse {
+  height: 0 !important;
+  overflow: hidden !important;
+  clear: both;
+  background-color: white;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border: 1px solid #b2b2b2;
+  border-top: 0 none;
+}
+/* line 1058, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar .nav-collapse.in {
+  overflow: visible !important;
+  height: auto !important;
+}
+/* line 1064, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar .nav-collapse .nav {
+  float: none;
+}
+/* line 1066, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar .nav-collapse .nav > li {
+  float: none;
+  clear: both;
+}
+/* line 70, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar .nav-collapse .nav > li.active > .hitarea, .responsive-navbar .navbar .nav-collapse .nav > li.active > .hitarea:active, .responsive-navbar .navbar .nav-collapse .nav > li.active > .hitarea:hover, .responsive-navbar .navbar .nav-collapse .nav > li.active > .hitarea:hover:active, .responsive-navbar .navbar .nav-collapse .nav > li.active > .hitarea:focus, .responsive-navbar .navbar .nav-collapse .nav > li.active > .hitarea:focus:active {
+  -webkit-box-shadow: inset 4px 0 0 #7bce05;
+  -moz-box-shadow: inset 4px 0 0 #7bce05;
+  box-shadow: inset 4px 0 0 #7bce05;
+}
+/* line 1082, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar .nav-collapse .nav > li.dropdown .dropdown-menu {
+  float: none;
+  clear: both;
+  position: relative;
+  border-left: 0 none;
+  border-right: 0 none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+/* line 1097, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar .nav-collapse .nav > li.dropdown .dropdown-menu,
+.responsive-navbar .navbar .nav-collapse .nav > li.dropdown .dropdown-menu > li > .hitarea {
+  max-width: none;
+}
+/* line 1106, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar .nav-collapse .nav > li:last-child.dropdown.open .dropdown-menu {
+  border-bottom: 0 none;
+}
+/* line 1119, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar-fixed-top .nav-collapse,
+.responsive-navbar .navbar-fixed-bottom .nav-collapse,
+.responsive-navbar .navbar-static-top .nav-collapse {
+  border-left: 0 none;
+  border-right: 0 none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+/* line 1125, ../../../sass/_constants/_mixins.scss */
+.responsive-navbar .navbar-fixed-top .nav-collapse.in,
+.responsive-navbar .navbar-fixed-bottom .nav-collapse.in,
+.responsive-navbar .navbar-static-top .nav-collapse.in {
+  -webkit-box-shadow: 0 -2px 0 white, 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 -2px 0 white, 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 -2px 0 white, 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 367, ../../../sass/docs.scss */
+.bs-navbar-bottom-example .navbar .tabbable .tab-content.subnav p,
+.bs-navbar-top-example .navbar .tabbable .tab-content.subnav p {
+  margin: 0;
+  padding: 0;
+}
+/* line 371, ../../../sass/docs.scss */
+.bs-navbar-bottom-example .navbar .tabbable .tab-content.subnav p .icon, .bs-navbar-bottom-example .navbar .tabbable .tab-content.subnav p .btn,
+.bs-navbar-top-example .navbar .tabbable .tab-content.subnav p .icon,
+.bs-navbar-top-example .navbar .tabbable .tab-content.subnav p .btn {
+  float: left;
+  margin-right: 20px;
+}
+/* line 376, ../../../sass/docs.scss */
+.bs-navbar-bottom-example .navbar .tabbable .tab-content.subnav p .icon,
+.bs-navbar-top-example .navbar .tabbable .tab-content.subnav p .icon {
+  color: #b2b2b2;
+}
+/* line 378, ../../../sass/docs.scss */
+.bs-navbar-bottom-example .navbar .tabbable .tab-content.subnav p .icon:last-child,
+.bs-navbar-top-example .navbar .tabbable .tab-content.subnav p .icon:last-child {
+  margin-right: 0;
+}
+
+/* Example modals */
+/* line 388, ../../../sass/docs.scss */
+.wdesk-docs-example-modal {
+  max-height: 440px;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* line 393, ../../../sass/docs.scss */
+.wdesk-docs-example-modal-notifications {
+  max-height: 900px;
+}
+/* line 397, ../../../sass/docs.scss */
+.wdesk-docs-example-modal-notifications .modal.second {
+  top: 320px;
+}
+/* line 400, ../../../sass/docs.scss */
+.wdesk-docs-example-modal-notifications .modal.third {
+  top: 600px;
+}
+
+/* line 405, ../../../sass/docs.scss */
+.wdesk-docs-example-modal .modal {
+  position: absolute;
+  display: block;
+  top: 40px;
+  z-index: 3;
+}
+
+/* line 411, ../../../sass/docs.scss */
+.wdesk-docs-example-modal .modal-backdrop {
+  position: absolute;
+  z-index: 2;
+}
+
+/* line 415, ../../../sass/docs.scss */
+.wdesk-docs-example-modal .modal-dialog {
+  left: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+
+/* Example dropdowns */
+/* line 425, ../../../sass/docs.scss */
+.wdesk-docs-example > .dropdown > .dropdown-menu,
+.wdesk-docs-example-submenu > .pull-left > .dropup > .dropdown-menu,
+.wdesk-docs-example-submenu > .pull-left > .dropdown > .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* line 430, ../../../sass/docs.scss */
+.wdesk-docs-example-submenu {
+  min-height: 240px;
+}
+
+/* line 433, ../../../sass/docs.scss */
+.wdesk-docs-example-submenu > .pull-left + .pull-left {
+  margin-left: 20px;
+}
+
+/* Example tabbable tabs */
+/* line 438, ../../../sass/docs.scss */
+.wdesk-docs-example-tabs .nav-tabs {
+  margin-bottom: 15px;
+}
+
+/* Example templates
+-------------------------------------------------- */
+/* line 446, ../../../sass/docs.scss */
+.wdesk-docs-examples h4 {
+  margin-bottom: 5px;
+}
+
+/* line 449, ../../../sass/docs.scss */
+.wdesk-docs-examples p {
+  margin-bottom: 20px;
+}
+
+/* line 458, ../../../sass/docs.scss */
+.wdesk-docs-example.spinner-sizes {
+  float: left;
+  height: auto;
+  width: 100%;
+  background-color: white;
+}
+/* line 463, ../../../sass/docs.scss */
+.wdesk-docs-example.spinner-sizes .spinner {
+  display: block;
+  float: left;
+  margin-right: 35px;
+}
+/* line 467, ../../../sass/docs.scss */
+.wdesk-docs-example.spinner-sizes .spinner:last-child {
+  margin-right: 0;
+}
+/* line 472, ../../../sass/docs.scss */
+.wdesk-docs-example.download-spinners .btn {
+  width: 130px;
+  text-align: left;
+  position: relative;
+}
+/* line 476, ../../../sass/docs.scss */
+.wdesk-docs-example.download-spinners .btn .icon.pull-right {
+  position: absolute;
+  left: auto;
+  right: 6px;
+  top: 6px;
+}
+/* line 482, ../../../sass/docs.scss */
+.wdesk-docs-example.download-spinners .btn .icon.pull-right.icon-downloading {
+  top: 4px;
+}
+
+/* Responsive docs
+-------------------------------------------------- */
+/* Related: responsive utilities tables */
+/* line 496, ../../../sass/docs.scss */
+.table code {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+/* Utility classes table
+------------------------- */
+/* line 503, ../../../sass/docs.scss */
+.responsive-utilities th small {
+  display: block;
+  font-weight: normal;
+  color: #999;
+}
+
+/* line 508, ../../../sass/docs.scss */
+.responsive-utilities tbody th {
+  font-weight: normal;
+}
+
+/* line 511, ../../../sass/docs.scss */
+.responsive-utilities td {
+  text-align: center;
+}
+
+/* line 514, ../../../sass/docs.scss */
+.responsive-utilities td.is-visible {
+  color: #468847;
+  background-color: #dff0d8 !important;
+}
+
+/* line 518, ../../../sass/docs.scss */
+.responsive-utilities td.is-hidden {
+  color: #ccc;
+  background-color: #f9f9f9 !important;
+}
+
+/* Responsive tests
+------------------------- */
+/* line 525, ../../../sass/docs.scss */
+.responsive-utilities-test {
+  margin-top: 5px;
+  margin-left: 0;
+  list-style: none;
+  overflow: hidden;
+  /* clear floats */
+}
+
+/* line 531, ../../../sass/docs.scss */
+.responsive-utilities-test li {
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 43px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 43px;
+  color: #999;
+  text-align: center;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 544, ../../../sass/docs.scss */
+.responsive-utilities-test li + li {
+  margin-left: 10px;
+}
+
+/* line 547, ../../../sass/docs.scss */
+.responsive-utilities-test span {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 555, ../../../sass/docs.scss */
+.responsive-utilities-test span {
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+}
+
+/* Footer
+-------------------------------------------------- */
+/* line 566, ../../../sass/docs.scss */
+.wdesk-docs-footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 100px;
+  border-top: 1px solid #e3e3e3;
+}
+
+/* line 572, ../../../sass/docs.scss */
+.wdesk-docs-footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+
+/* line 576, ../../../sass/docs.scss */
+.footer-links {
+  margin: 10px 0;
+}
+
+/* line 579, ../../../sass/docs.scss */
+.footer-links li {
+  display: inline;
+  padding: 0 2px;
+}
+
+/* line 583, ../../../sass/docs.scss */
+.footer-links li:first-child {
+  padding-left: 0;
+}
+
+/* Social proof buttons from GitHub & Twitter */
+/* line 588, ../../../sass/docs.scss */
+.wdesk-docs-social {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Quick links on Home */
+/* line 594, ../../../sass/docs.scss */
+.wdesk-docs-social-buttons {
+  display: inline-block;
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+}
+
+/* line 600, ../../../sass/docs.scss */
+.wdesk-docs-social-buttons li {
+  display: inline-block;
+  padding: 5px 8px;
+  line-height: 1;
+}
+
+/* line 605, ../../../sass/docs.scss */
+.wdesk-docs-social-buttons .twitter-follow-button {
+  width: 225px !important;
+}
+
+/* line 608, ../../../sass/docs.scss */
+.wdesk-docs-social-buttons .twitter-share-button {
+  width: 98px !important;
+}
+
+/* Misc docs stuff
+-------------------------------------------------- */
+/* Pseudo :focus state for showing how it looks in the docs */
+/* line 618, ../../../sass/docs.scss */
+input.focused {
+  outline: 0;
+  border-color: #46b5f9;
+  color: #595959;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 1px #46b5f9;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 1px #46b5f9;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 1px #46b5f9;
+}
+
+/* Scrollspy demo on fixed height div */
+/* line 623, ../../../sass/docs.scss */
+.scrollspy-example {
+  position: relative;
+  height: 200px;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+/* line 630, ../../../sass/docs.scss */
+.highlight {
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 637, ../../../sass/docs.scss */
+.highlight pre {
+  padding: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 643, ../../../sass/docs.scss */
+.highlight pre code {
+  font-size: inherit;
+  color: #333;
+  /* Effectively the base text color */
+}
+
+/* line 647, ../../../sass/docs.scss */
+.highlight pre .lineno {
+  display: inline-block;
+  width: 22px;
+  padding-right: 5px;
+  margin-right: 10px;
+  text-align: right;
+  color: #bebec5;
+}
+
+/* Docs gallery
+-------------------------------------------------- */
+/* line 661, ../../../sass/docs.scss */
+.wdesk-docs-gallery .thumbnail {
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+
+/* Responsive variations
+-------------------------------------------------- */
+/* Hide code snippets on mobile devices */
+@media screen and (max-width: 480px) {
+  /* line 672, ../../../sass/docs.scss */
+  .wdesk-docs-example {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+
+  /* line 675, ../../../sass/docs.scss */
+  .highlight {
+    display: none;
+  }
+}
+/* Tablets and up */
+@media screen and (min-width: 768px) {
+  /* Account for fixed navbar (which is static to start) */
+  /* line 684, ../../../sass/docs.scss */
+  body {
+    padding-top: 32px;
+  }
+
+  /* Tweak display of docs jumbotrons */
+  /* line 689, ../../../sass/docs.scss */
+  .masthead {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  /* line 693, ../../../sass/docs.scss */
+  .masthead h1 {
+    font-size: 100px;
+  }
+
+  /* line 696, ../../../sass/docs.scss */
+  .masthead p {
+    font-size: 22px;
+    font-size: 2.2rem;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  /* line 701, ../../../sass/docs.scss */
+  .subhead {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: left;
+  }
+
+  /* From here, start to affix the nav because we keep columns here */
+  /* line 708, ../../../sass/docs.scss */
+  .wdesk-docs-sidenav.affix {
+    position: fixed;
+    top: 54px;
+  }
+
+  /* line 712, ../../../sass/docs.scss */
+  .wdesk-docs-sidenav.affix-bottom {
+    position: absolute;
+    top: auto;
+    bottom: 270px;
+  }
+
+  /* line 718, ../../../sass/docs.scss */
+  section > h2,
+  section > .h2 {
+    margin-top: 60px;
+    margin-top: 6rem;
+  }
+
+  /* line 723, ../../../sass/docs.scss */
+  section .page-header + h2,
+  section .page-header + .h2 {
+    margin-top: 20px;
+    margin-top: 2rem;
+  }
+
+  /* line 727, ../../../sass/docs.scss */
+  section > h3,
+  section > .h3 {
+    margin-top: 30px;
+    margin-top: 3rem;
+  }
+
+  /* line 732, ../../../sass/docs.scss */
+  .wdesk-docs-sidenav {
+    width: 148px;
+  }
+
+  /* line 736, ../../../sass/docs.scss */
+  .wdesk-docs-example-modal {
+    max-height: 480px;
+  }
+
+  /* line 739, ../../../sass/docs.scss */
+  .wdesk-docs-example-modal-notifications {
+    max-height: 940px;
+  }
+}
+/* Tablets/desktops and up */
+@media screen and (min-width: 992px) {
+  /* Icons */
+  /* line 749, ../../../sass/docs.scss */
+  .the-icons li {
+    width: 12.5%;
+  }
+
+  /* line 753, ../../../sass/docs.scss */
+  .wdesk-docs-sidenav {
+    width: 200px;
+  }
+}
+/* Large desktops and up */
+@media screen and (min-width: 1200px) {
+  /* line 760, ../../../sass/docs.scss */
+  .wdesk-docs-sidenav {
+    width: 270px;
+  }
+}
+/* line 1, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .glyph {
+  font-size: 16px;
+  float: left;
+  text-align: center;
+  background: #f3f3f3;
+  padding: 10px;
+  margin: 0 10px 10px 0;
+  width: 23%;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  box-shadow: inset 0 0 0 1px #f8f8f8, 0 0 0 1px #e3e3e3;
+}
+@media screen and (min-width: 1200px) {
+  /* line 1, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+  .wdesk-docs-icomoon-glyphs .glyph {
+    width: 15%;
+  }
+}
+/* line 16, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .glyph .classname {
+  line-height: normal;
+  display: block;
+  clear: both;
+  margin: 20px -10px -10px -10px;
+  padding: 5px 0 0 0;
+  min-height: 50px;
+  -moz-border-radius-bottomleft: 0.25em;
+  -webkit-border-bottom-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+  -moz-border-radius-bottomright: 0.25em;
+  -webkit-border-bottom-right-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+}
+/* line 25, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .glyph .classname, .wdesk-docs-icomoon-glyphs .glyph .classname code {
+  background-color: #e6e6e6;
+}
+/* line 28, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .glyph .classname code {
+  white-space: normal;
+}
+/* line 33, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .glyph input,
+.wdesk-docs-icomoon-glyphs .glyph label {
+  float: left;
+  width: auto;
+  opacity: 0.6;
+}
+/* line 107, ../../../sass/_constants/_ua-media/_browsers.scss */
+.ua-ie8 .wdesk-docs-icomoon-glyphs .glyph input, .ua-ie8
+.wdesk-docs-icomoon-glyphs .glyph label {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+}
+/* line 38, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .glyph label {
+  margin-right: 10px;
+  font-size: 11px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+/* line 44, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .glyph input {
+  font-family: consolas, monospace;
+  font-size: 13px;
+  width: 60%;
+  text-align: center;
+  border: 0;
+  box-shadow: 0 0 0 1px #ccc;
+  padding: .125em;
+  margin: 0 0 7px 0;
+}
+/* line 53, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .glyph input:focus {
+  opacity: 1;
+}
+/* line 107, ../../../sass/_constants/_ua-media/_browsers.scss */
+.ua-ie8 .wdesk-docs-icomoon-glyphs .glyph input:focus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+/* line 55, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .w-main {
+  width: 80%;
+}
+/* line 58, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 62, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .fs1 {
+  font-size: 48px;
+  line-height: 48px;
+  height: 60px;
+  width: 60px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+/* line 71, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .fs1 + input {
+  margin: 0;
+}
+/* line 75, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs header {
+  margin: 2em 0;
+  padding-bottom: .5em;
+  color: #666;
+  box-shadow: 0 2px #eee;
+}
+/* line 81, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs header h1 {
+  font-size: 2em;
+  font-weight: normal;
+}
+/* line 85, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .clearfix:before, .wdesk-docs-icomoon-glyphs .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 86, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .clearfix:after, .wdesk-docs-icomoon-glyphs .clear {
+  clear: both;
+}
+/* line 87, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs footer {
+  margin-top: 2em;
+  padding: .5em 0;
+  box-shadow: 0 -2px #eee;
+}
+/* line 92, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs a, .wdesk-docs-icomoon-glyphs a:visited {
+  color: #B35047;
+  text-decoration: none;
+}
+/* line 96, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs a:hover, .wdesk-docs-icomoon-glyphs a:focus {
+  color: #000;
+}
+/* line 97, ../../../sass/_docs-only/_icomoon-glyph-examples.scss */
+.wdesk-docs-icomoon-glyphs .box1 {
+  font-size: 16px;
+  display: inline-block;
+  width: 15em;
+  padding: .25em .5em;
+  background: #eee;
+  margin: .5em 1em .5em 0;
+}
+
+/* line 1, ../../../sass/_docs-only/_pygments-manni.scss */
+.hll {
+  background-color: #ffffcc;
+}
+
+/* line 2, ../../../sass/_docs-only/_pygments-manni.scss */
+.c {
+  color: #999;
+}
+
+/* line 3, ../../../sass/_docs-only/_pygments-manni.scss */
+.err {
+  color: #AA0000;
+  background-color: #FFAAAA;
+}
+
+/* line 4, ../../../sass/_docs-only/_pygments-manni.scss */
+.k {
+  color: #006699;
+}
+
+/* line 5, ../../../sass/_docs-only/_pygments-manni.scss */
+.o {
+  color: #555555;
+}
+
+/* line 6, ../../../sass/_docs-only/_pygments-manni.scss */
+.cm {
+  color: #0099FF;
+  font-style: italic;
+}
+
+/* line 7, ../../../sass/_docs-only/_pygments-manni.scss */
+.cp {
+  color: #009999;
+}
+
+/* line 8, ../../../sass/_docs-only/_pygments-manni.scss */
+.c1 {
+  color: #999;
+}
+
+/* line 9, ../../../sass/_docs-only/_pygments-manni.scss */
+.cs {
+  color: #999;
+}
+
+/* line 10, ../../../sass/_docs-only/_pygments-manni.scss */
+.gd {
+  background-color: #FFCCCC;
+  border: 1px solid #CC0000;
+}
+
+/* line 11, ../../../sass/_docs-only/_pygments-manni.scss */
+.ge {
+  font-style: italic;
+}
+
+/* line 12, ../../../sass/_docs-only/_pygments-manni.scss */
+.gr {
+  color: #FF0000;
+}
+
+/* line 13, ../../../sass/_docs-only/_pygments-manni.scss */
+.gh {
+  color: #003300;
+}
+
+/* line 14, ../../../sass/_docs-only/_pygments-manni.scss */
+.gi {
+  background-color: #CCFFCC;
+  border: 1px solid #00CC00;
+}
+
+/* line 15, ../../../sass/_docs-only/_pygments-manni.scss */
+.go {
+  color: #AAAAAA;
+}
+
+/* line 16, ../../../sass/_docs-only/_pygments-manni.scss */
+.gp {
+  color: #000099;
+}
+
+/* line 17, ../../../sass/_docs-only/_pygments-manni.scss */
+.gs {
+  font-style: bold;
+}
+
+/* line 18, ../../../sass/_docs-only/_pygments-manni.scss */
+.gu {
+  color: #003300;
+}
+
+/* line 19, ../../../sass/_docs-only/_pygments-manni.scss */
+.gt {
+  color: #99CC66;
+}
+
+/* line 20, ../../../sass/_docs-only/_pygments-manni.scss */
+.kc {
+  color: #006699;
+}
+
+/* line 21, ../../../sass/_docs-only/_pygments-manni.scss */
+.kd {
+  color: #006699;
+}
+
+/* line 22, ../../../sass/_docs-only/_pygments-manni.scss */
+.kn {
+  color: #006699;
+}
+
+/* line 23, ../../../sass/_docs-only/_pygments-manni.scss */
+.kp {
+  color: #006699;
+}
+
+/* line 24, ../../../sass/_docs-only/_pygments-manni.scss */
+.kr {
+  color: #006699;
+}
+
+/* line 25, ../../../sass/_docs-only/_pygments-manni.scss */
+.kt {
+  color: #007788;
+}
+
+/* line 26, ../../../sass/_docs-only/_pygments-manni.scss */
+.m {
+  color: #FF6600;
+}
+
+/* line 27, ../../../sass/_docs-only/_pygments-manni.scss */
+.s {
+  color: #d44950;
+}
+
+/* line 28, ../../../sass/_docs-only/_pygments-manni.scss */
+.na {
+  color: #4f9fcf;
+}
+
+/* line 29, ../../../sass/_docs-only/_pygments-manni.scss */
+.nb {
+  color: #336666;
+}
+
+/* line 30, ../../../sass/_docs-only/_pygments-manni.scss */
+.nc {
+  color: #00AA88;
+}
+
+/* line 31, ../../../sass/_docs-only/_pygments-manni.scss */
+.no {
+  color: #336600;
+}
+
+/* line 32, ../../../sass/_docs-only/_pygments-manni.scss */
+.nd {
+  color: #9999FF;
+}
+
+/* line 33, ../../../sass/_docs-only/_pygments-manni.scss */
+.ni {
+  color: #999999;
+}
+
+/* line 34, ../../../sass/_docs-only/_pygments-manni.scss */
+.ne {
+  color: #CC0000;
+}
+
+/* line 35, ../../../sass/_docs-only/_pygments-manni.scss */
+.nf {
+  color: #CC00FF;
+}
+
+/* line 36, ../../../sass/_docs-only/_pygments-manni.scss */
+.nl {
+  color: #9999FF;
+}
+
+/* line 37, ../../../sass/_docs-only/_pygments-manni.scss */
+.nn {
+  color: #00CCFF;
+}
+
+/* line 38, ../../../sass/_docs-only/_pygments-manni.scss */
+.nt {
+  color: #2f6f9f;
+}
+
+/* line 39, ../../../sass/_docs-only/_pygments-manni.scss */
+.nv {
+  color: #003333;
+}
+
+/* line 40, ../../../sass/_docs-only/_pygments-manni.scss */
+.ow {
+  color: #000000;
+}
+
+/* line 41, ../../../sass/_docs-only/_pygments-manni.scss */
+.w {
+  color: #bbbbbb;
+}
+
+/* line 42, ../../../sass/_docs-only/_pygments-manni.scss */
+.mf {
+  color: #FF6600;
+}
+
+/* line 43, ../../../sass/_docs-only/_pygments-manni.scss */
+.mh {
+  color: #FF6600;
+}
+
+/* line 44, ../../../sass/_docs-only/_pygments-manni.scss */
+.mi {
+  color: #FF6600;
+}
+
+/* line 45, ../../../sass/_docs-only/_pygments-manni.scss */
+.mo {
+  color: #FF6600;
+}
+
+/* line 46, ../../../sass/_docs-only/_pygments-manni.scss */
+.sb {
+  color: #CC3300;
+}
+
+/* line 47, ../../../sass/_docs-only/_pygments-manni.scss */
+.sc {
+  color: #CC3300;
+}
+
+/* line 48, ../../../sass/_docs-only/_pygments-manni.scss */
+.sd {
+  color: #CC3300;
+  font-style: italic;
+}
+
+/* line 49, ../../../sass/_docs-only/_pygments-manni.scss */
+.s2 {
+  color: #CC3300;
+}
+
+/* line 50, ../../../sass/_docs-only/_pygments-manni.scss */
+.se {
+  color: #CC3300;
+}
+
+/* line 51, ../../../sass/_docs-only/_pygments-manni.scss */
+.sh {
+  color: #CC3300;
+}
+
+/* line 52, ../../../sass/_docs-only/_pygments-manni.scss */
+.si {
+  color: #AA0000;
+}
+
+/* line 53, ../../../sass/_docs-only/_pygments-manni.scss */
+.sx {
+  color: #CC3300;
+}
+
+/* line 54, ../../../sass/_docs-only/_pygments-manni.scss */
+.sr {
+  color: #33AAAA;
+}
+
+/* line 55, ../../../sass/_docs-only/_pygments-manni.scss */
+.s1 {
+  color: #CC3300;
+}
+
+/* line 56, ../../../sass/_docs-only/_pygments-manni.scss */
+.ss {
+  color: #FFCC33;
+}
+
+/* line 57, ../../../sass/_docs-only/_pygments-manni.scss */
+.bp {
+  color: #336666;
+}
+
+/* line 58, ../../../sass/_docs-only/_pygments-manni.scss */
+.vc {
+  color: #003333;
+}
+
+/* line 59, ../../../sass/_docs-only/_pygments-manni.scss */
+.vg {
+  color: #003333;
+}
+
+/* line 60, ../../../sass/_docs-only/_pygments-manni.scss */
+.vi {
+  color: #003333;
+}
+
+/* line 61, ../../../sass/_docs-only/_pygments-manni.scss */
+.il {
+  color: #FF6600;
+}
+
+/* line 12, ../../../sass/_utilities.scss */
+.clip-text {
+  display: inherit;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/* line 18, ../../../sass/_utilities.scss */
+.flush {
+  margin: 0;
+}
+
+/* line 20, ../../../sass/_utilities.scss */
+.affix {
+  position: fixed;
+}
+
+/* line 23, ../../../sass/_utilities.scss */
+.cursor-disabled {
+  cursor: not-allowed;
+}
+
+/* line 24, ../../../sass/_utilities.scss */
+.cursor-move {
+  cursor: move;
+}
+
+/* line 25, ../../../sass/_utilities.scss */
+.cursor-default {
+  cursor: default;
+}
+
+/* line 26, ../../../sass/_utilities.scss */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* line 26, ../../../sass/_constants/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+}
+/* line 30, ../../../sass/_constants/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 36, ../../../sass/_utilities.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 37, ../../../sass/_utilities.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 44, ../../../sass/_utilities.scss */
+.hide {
+  display: none !important;
+}
+/* line 47, ../../../sass/_utilities.scss */
+.hide:before, .hide:after {
+  display: none !important;
+}
+
+/* line 51, ../../../sass/_utilities.scss */
+.show {
+  display: block !important;
+}
+/* line 54, ../../../sass/_utilities.scss */
+.show:before, .show:after {
+  display: block !important;
+}
+
+/* line 59, ../../../sass/_utilities.scss */
+.invisible,
+.hidden {
+  visibility: hidden;
+}
+
+/* line 61, ../../../sass/_utilities.scss */
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 67, ../../../sass/_utilities.scss */
+[ng-cloak],
+[data-ng-cloak],
+.ng-cloak {
+  display: none;
+}
+/* line 69, ../../../sass/_utilities.scss */
+[ng-cloak].show,
+[data-ng-cloak].show,
+.ng-cloak.show {
+  display: block !important;
+}
+
+/* line 74, ../../../sass/_utilities.scss */
+span.ng-scope:empty,
+div.ng-scope:empty {
+  display: none !important;
+}
+
+/* line 87, ../../../sass/_utilities.scss */
+.bg-default {
+  background-color: #fafafa !important;
+}
+/* line 92, ../../../sass/_utilities.scss */
+.bg-default[href]:hover, .bg-default[href]:focus, .bg-default[wf-click]:hover, .bg-default[wf-click]:focus {
+  background-color: #ededed !important;
+}
+
+/* line 104, ../../../sass/_utilities.scss */
+.text-default, .text-default[href], .text-default[wf-click] {
+  color: #7f7f7f !important;
+}
+/* line 107, ../../../sass/_utilities.scss */
+.text-default.muted, .text-default .muted, .text-default[href].muted, .text-default[href] .muted, .text-default[wf-click].muted, .text-default[wf-click] .muted {
+  color: #d8d8d8 !important;
+}
+/* line 113, ../../../sass/_utilities.scss */
+.text-default[href]:hover, .text-default[href]:focus, .text-default[wf-click]:hover, .text-default[wf-click]:focus {
+  color: #676767 !important;
+}
+/* line 117, ../../../sass/_utilities.scss */
+.text-default[href]:hover.muted, .text-default[href]:hover .muted, .text-default[href]:focus.muted, .text-default[href]:focus .muted, .text-default[wf-click]:hover.muted, .text-default[wf-click]:hover .muted, .text-default[wf-click]:focus.muted, .text-default[wf-click]:focus .muted {
+  color: #d1d1d1 !important;
+}
+
+/* line 87, ../../../sass/_utilities.scss */
+.bg-primary {
+  background-color: #fbfff5 !important;
+}
+/* line 92, ../../../sass/_utilities.scss */
+.bg-primary[href]:hover, .bg-primary[href]:focus, .bg-primary[wf-click]:hover, .bg-primary[wf-click]:focus {
+  background-color: #f0fddd !important;
+}
+
+/* line 104, ../../../sass/_utilities.scss */
+.text-primary, .text-primary[href], .text-primary[wf-click] {
+  color: #406a03 !important;
+}
+/* line 107, ../../../sass/_utilities.scss */
+.text-primary.muted, .text-primary .muted, .text-primary[href].muted, .text-primary[href] .muted, .text-primary[wf-click].muted, .text-primary[wf-click] .muted {
+  color: #c5d2b3 !important;
+}
+/* line 113, ../../../sass/_utilities.scss */
+.text-primary[href]:hover, .text-primary[href]:focus, .text-primary[wf-click]:hover, .text-primary[wf-click]:focus {
+  color: #243d01 !important;
+}
+/* line 117, ../../../sass/_utilities.scss */
+.text-primary[href]:hover.muted, .text-primary[href]:hover .muted, .text-primary[href]:focus.muted, .text-primary[href]:focus .muted, .text-primary[wf-click]:hover.muted, .text-primary[wf-click]:hover .muted, .text-primary[wf-click]:focus.muted, .text-primary[wf-click]:focus .muted {
+  color: #bdc4b2 !important;
+}
+
+/* line 87, ../../../sass/_utilities.scss */
+.bg-alt {
+  background-color: #f5fbff !important;
+}
+/* line 92, ../../../sass/_utilities.scss */
+.bg-alt[href]:hover, .bg-alt[href]:focus, .bg-alt[wf-click]:hover, .bg-alt[wf-click]:focus {
+  background-color: #dcf0fe !important;
+}
+
+/* line 104, ../../../sass/_utilities.scss */
+.text-alt, .text-alt[href], .text-alt[wf-click] {
+  color: #005999 !important;
+}
+/* line 107, ../../../sass/_utilities.scss */
+.text-alt.muted, .text-alt .muted, .text-alt[href].muted, .text-alt[href] .muted, .text-alt[wf-click].muted, .text-alt[wf-click] .muted {
+  color: #b2cde0 !important;
+}
+/* line 113, ../../../sass/_utilities.scss */
+.text-alt[href]:hover, .text-alt[href]:focus, .text-alt[wf-click]:hover, .text-alt[wf-click]:focus {
+  color: #003e6a !important;
+}
+/* line 117, ../../../sass/_utilities.scss */
+.text-alt[href]:hover.muted, .text-alt[href]:hover .muted, .text-alt[href]:focus.muted, .text-alt[href]:focus .muted, .text-alt[wf-click]:hover.muted, .text-alt[wf-click]:hover .muted, .text-alt[wf-click]:focus.muted, .text-alt[wf-click]:focus .muted {
+  color: #b2c5d2 !important;
+}
+
+/* line 87, ../../../sass/_utilities.scss */
+.bg-success {
+  background-color: #fbfff5 !important;
+}
+/* line 92, ../../../sass/_utilities.scss */
+.bg-success[href]:hover, .bg-success[href]:focus, .bg-success[wf-click]:hover, .bg-success[wf-click]:focus {
+  background-color: #f0fddd !important;
+}
+
+/* line 104, ../../../sass/_utilities.scss */
+.text-success, .text-success[href], .text-success[wf-click] {
+  color: #406a03 !important;
+}
+/* line 107, ../../../sass/_utilities.scss */
+.text-success.muted, .text-success .muted, .text-success[href].muted, .text-success[href] .muted, .text-success[wf-click].muted, .text-success[wf-click] .muted {
+  color: #c5d2b3 !important;
+}
+/* line 113, ../../../sass/_utilities.scss */
+.text-success[href]:hover, .text-success[href]:focus, .text-success[wf-click]:hover, .text-success[wf-click]:focus {
+  color: #243d01 !important;
+}
+/* line 117, ../../../sass/_utilities.scss */
+.text-success[href]:hover.muted, .text-success[href]:hover .muted, .text-success[href]:focus.muted, .text-success[href]:focus .muted, .text-success[wf-click]:hover.muted, .text-success[wf-click]:hover .muted, .text-success[wf-click]:focus.muted, .text-success[wf-click]:focus .muted {
+  color: #bdc4b2 !important;
+}
+
+/* line 87, ../../../sass/_utilities.scss */
+.bg-warning {
+  background-color: #fffbf5 !important;
+}
+/* line 92, ../../../sass/_utilities.scss */
+.bg-warning[href]:hover, .bg-warning[href]:focus, .bg-warning[wf-click]:hover, .bg-warning[wf-click]:focus {
+  background-color: #fef2dd !important;
+}
+
+/* line 104, ../../../sass/_utilities.scss */
+.text-warning, .text-warning[href], .text-warning[wf-click] {
+  color: #a97003 !important;
+}
+/* line 107, ../../../sass/_utilities.scss */
+.text-warning.muted, .text-warning .muted, .text-warning[href].muted, .text-warning[href] .muted, .text-warning[wf-click].muted, .text-warning[wf-click] .muted {
+  color: #e5d4b3 !important;
+}
+/* line 113, ../../../sass/_utilities.scss */
+.text-warning[href]:hover, .text-warning[href]:focus, .text-warning[wf-click]:hover, .text-warning[wf-click]:focus {
+  color: #7b5202 !important;
+}
+/* line 117, ../../../sass/_utilities.scss */
+.text-warning[href]:hover.muted, .text-warning[href]:hover .muted, .text-warning[href]:focus.muted, .text-warning[href]:focus .muted, .text-warning[wf-click]:hover.muted, .text-warning[wf-click]:hover .muted, .text-warning[wf-click]:focus.muted, .text-warning[wf-click]:focus .muted {
+  color: #d7cbb3 !important;
+}
+
+/* line 87, ../../../sass/_utilities.scss */
+.bg-error {
+  background-color: #fff6f5 !important;
+}
+/* line 92, ../../../sass/_utilities.scss */
+.bg-error[href]:hover, .bg-error[href]:focus, .bg-error[wf-click]:hover, .bg-error[wf-click]:focus {
+  background-color: #fedfdc !important;
+}
+
+/* line 104, ../../../sass/_utilities.scss */
+.text-error, .text-error[href], .text-error[wf-click] {
+  color: #ce0f00 !important;
+}
+/* line 107, ../../../sass/_utilities.scss */
+.text-error.muted, .text-error .muted, .text-error[href].muted, .text-error[href] .muted, .text-error[wf-click].muted, .text-error[wf-click] .muted {
+  color: #f0b7b2 !important;
+}
+/* line 113, ../../../sass/_utilities.scss */
+.text-error[href]:hover, .text-error[href]:focus, .text-error[wf-click]:hover, .text-error[wf-click]:focus {
+  color: #9f0c00 !important;
+}
+/* line 117, ../../../sass/_utilities.scss */
+.text-error[href]:hover.muted, .text-error[href]:hover .muted, .text-error[href]:focus.muted, .text-error[href]:focus .muted, .text-error[wf-click]:hover.muted, .text-error[wf-click]:hover .muted, .text-error[wf-click]:focus.muted, .text-error[wf-click]:focus .muted {
+  color: #e2b6b2 !important;
+}
+
+/* line 103, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+.visible-print {
+  display: none !important;
+}
+
+@media print {
+  /* line 107, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .visible-print {
+    display: inherit !important;
+  }
+
+  /* line 108, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .hidden-print {
+    display: none !important;
+  }
+}
+/* line 112, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+.visible-phone {
+  display: none !important;
+}
+
+/* line 113, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+.visible-tablet {
+  display: none !important;
+}
+
+/* line 117, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+.hidden-desktop {
+  display: none !important;
+}
+
+/* line 120, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+.visible-touch {
+  display: none !important;
+}
+
+/* line 121, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+.visible-density {
+  display: none !important;
+}
+
+/* line 122, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+.visible-mdpi {
+  display: none !important;
+}
+
+/* line 123, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+.visible-hdpi {
+  display: none !important;
+}
+
+/* line 124, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+.visible-retina {
+  display: none !important;
+}
+
+/* line 125, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+.visible-landscape {
+  display: none !important;
+}
+
+/* line 126, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+.visible-portrait {
+  display: none !important;
+}
+
+/* line 127, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+.visible-tablet7 {
+  display: none !important;
+}
+
+/* line 132, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+.hidden-retina {
+  display: inherit !important;
+}
+
+/* line 139, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+html.touch .visible-touch {
+  display: inherit !important;
+}
+/* line 142, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+html.touch .hidden-touch {
+  display: none !important;
+}
+
+@media only screen and (orientation: landscape) {
+  /* line 73, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .hidden-landscape {
+    display: none !important;
+  }
+
+  /* line 74, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .visible-landscape {
+    display: inherit !important;
+  }
+}
+@media only screen and (orientation: portrait) {
+  /* line 69, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .hidden-portrait {
+    display: none !important;
+  }
+
+  /* line 70, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .visible-portrait {
+    display: inherit !important;
+  }
+}
+@media all and (-webkit-min-device-pixel-ratio: 2), all and (-o-min-device-pixel-ratio: 4 / 2), all and (min--moz-device-pixel-ratio: 2), all and (min-device-pixel-ratio: 2), all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5), all and (-webkit-min-device-pixel-ratio: 1.325), all and (-o-min-device-pixel-ratio: 2.65 / 2), all and (min--moz-device-pixel-ratio: 1.325), all and (min-device-pixel-ratio: 1.325) {
+  /* line 77, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .visible-density {
+    display: inherit !important;
+  }
+
+  /* line 78, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .hidden-density {
+    display: none !important;
+  }
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.325), all and (-o-min-device-pixel-ratio: 2.65 / 2), all and (min--moz-device-pixel-ratio: 1.325), all and (min-device-pixel-ratio: 1.325) {
+  /* line 81, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .visible-mdpi {
+    display: inherit !important;
+  }
+
+  /* line 82, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .hidden-mdpi {
+    display: none !important;
+  }
+
+  /* line 84, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .visible-hdpi, .visible-retina {
+    display: none !important;
+  }
+
+  /* line 85, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .hidden-hdpi, .hidden-retina {
+    display: inherit !important;
+  }
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  /* line 88, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .visible-hdpi {
+    display: inherit !important;
+  }
+
+  /* line 89, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .hidden-hdpi {
+    display: none !important;
+  }
+
+  /* line 91, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .visible-mdpi, .visible-retina {
+    display: none !important;
+  }
+
+  /* line 92, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .hidden-mdpi, .hidden-retina {
+    display: inherit !important;
+  }
+}
+@media all and (-webkit-min-device-pixel-ratio: 2), all and (-o-min-device-pixel-ratio: 4 / 2), all and (min--moz-device-pixel-ratio: 2), all and (min-device-pixel-ratio: 2) {
+  /* line 95, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .visible-retina {
+    display: inherit !important;
+  }
+
+  /* line 96, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .hidden-retina {
+    display: none !important;
+  }
+
+  /* line 98, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .visible-hdpi, .visible-mdpi {
+    display: none !important;
+  }
+
+  /* line 99, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .hidden-hdpi, .hidden-mdpi {
+    display: inherit !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 64, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .visible-phone {
+    display: inherit !important;
+  }
+  /* line 65, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .hidden-phone {
+    display: none !important;
+  }
+
+  /* line 41, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .hidden-desktop {
+    display: inherit !important;
+  }
+  /* line 42, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .visible-desktop {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 64, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .visible-phone {
+    display: inherit !important;
+  }
+  /* line 65, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .hidden-phone {
+    display: none !important;
+  }
+
+  /* line 41, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .hidden-desktop {
+    display: inherit !important;
+  }
+  /* line 42, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .visible-desktop {
+    display: none !important;
+  }
+}
+@media only screen and (max-device-width: 320px) {
+  /* line 64, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .visible-phone {
+    display: inherit !important;
+  }
+  /* line 65, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .hidden-phone {
+    display: none !important;
+  }
+
+  /* line 41, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .hidden-desktop {
+    display: inherit !important;
+  }
+  /* line 42, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .visible-desktop {
+    display: none !important;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* line 52, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .visible-tablet {
+    display: inherit !important;
+  }
+  /* line 53, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .hidden-tablet {
+    display: none !important;
+  }
+
+  /* line 41, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .hidden-desktop {
+    display: inherit !important;
+  }
+  /* line 42, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  html.touch .visible-desktop {
+    display: none !important;
+  }
+}
+@media (min-width: 1025px) {
+  /* line 47, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .hidden-desktop {
+    display: none !important;
+  }
+
+  /* line 48, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .visible-desktop {
+    display: inherit !important;
+  }
+}
+@media (min-width: 1824px) {
+  /* line 47, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .hidden-desktop {
+    display: none !important;
+  }
+
+  /* line 48, ../../../sass/_constants/_ua-media/_responsive-device-helpers.scss */
+  .visible-desktop {
+    display: inherit !important;
+  }
+}
+/* line 145, ../../../sass/_utilities.scss */
+.touch html {
+  position: fixed;
+  width: 100%;
+}
+
+/* line 153, ../../../sass/_utilities.scss */
+.novideo .video-help {
+  display: none;
+}
+
+/* line 166, ../../../sass/_utilities.scss */
+.desktop_laptop [href^="tel"] {
+  color: inherit !important;
+  cursor: default;
+  text-decoration: none;
+}

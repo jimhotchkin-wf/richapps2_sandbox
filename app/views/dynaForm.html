@@ -1,28 +1,26 @@
-<div id="container" class="row-fluid ui-panel-content ui-widget-content">
-    <form wf-dynamic-form entity="userprofile" class="dyna-form pro-forms">
-        <div class="span8">
-            <fieldset ng-repeat="category in formDefinitionObject.fieldtypes.visible.categories" id="{{category.entity}}_fields">
+<div class="row">
+    <form wf-dynamic-form entity="userprofile" class="form-horizontal">
+    <div class="span4">   
+        <fieldset ng-repeat="category in formDefinitionObject.fieldtypes.visible.categories" id="{{category.entity}}_fields">
             <legend>{{category.label}}</legend>
-            <ul class="dyna-form">
-                <li wf-dynamic-field ng-repeat="field in category.fields" content="field"></li>
-            </ul>
-            </fieldset>
-            <div class="form-controlbox">
-                <input type="submit" name="go" id="go" value="Save changes" />
-                <input type="reset" name="cancel" id="cancel" value="Cancel" />
-            </div>
+            <div wf-dynamic-field ng-repeat="field in category.fields" content="field" class="control-group"></div>
+        </fieldset>
+        <div class="form-actions">
+            <button type="submit" id="go" class="btn btn-primary">Save changes</button>
+            <button type="button" id="cancel" class="btn">Cancel</button>
         </div>
-        <div class="span4">
-            <ul>
-                <li ng-repeat="category in formDefinitionObject.fieldtypes.visible.categories">
-                    {{category.entity}}
-                    <ul>
-                        <li ng-repeat="field in category.fields" content="field">
-                            {{field.entity}} -- {{field.value}}
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+    </div>
+    <div class="span8">
+        <ul>
+            <li ng-repeat="category in formDefinitionObject.fieldtypes.visible.categories">
+                {{category.entity}}
+                <ul>
+                    <li ng-repeat="field in category.fields" content="field">
+                        {{field.entity}} -- {{field.value}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
     </form>
 </div>
